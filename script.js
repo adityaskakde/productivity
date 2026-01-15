@@ -396,37 +396,54 @@ setInterval(() => {
 }
 
 wheatherFunctionality();
+var theme = document.querySelector('.theme')
+var rootElement = document.documentElement
+var flag = 0
 
+theme.addEventListener('click', function () {
 
-    var theme = document.querySelector('.theme')
-    var rootElement = document.documentElement
-
-    var flag = 0
-    theme.addEventListener('click', function () {
-if (flag == 0) {
-    rootElement.style.setProperty('--pri', '#F8F4E1')
-    rootElement.style.setProperty('--sec', '#222831')
-    rootElement.style.setProperty('--tri1', '#948979')
-    rootElement.style.setProperty('--tri2', '#393E46')
-    flag = 1
-} else if (flag == 1) {
-    rootElement.style.setProperty('--pri', '#F1EFEC')
-    rootElement.style.setProperty('--sec', '#white')
-    rootElement.style.setProperty('--tri1', '#D4C9BE')
-    rootElement.style.setProperty('--tri2', '#142332')
-    flag = 2
-} else if (flag == 2) {
-    rootElement.style.setProperty('--pri', '#F8F4E1')
-    rootElement.style.setProperty('--sec', '#c4bcb7')
-    rootElement.style.setProperty('--tri1', '#FEBA17')
-    rootElement.style.setProperty('--tri2', '#74512D')
-    flag = 0
+  /* 🌙 DARK PREMIUM */
+  // 🌙 DARK PREMIUM
+if (flag === 0) {
+  rootElement.style.setProperty('--pri', '#F9FAFB')      // headings / UI text
+  rootElement.style.setProperty('--black', '#FFFFFF')   // ✅ TASK TEXT WHITE
+  rootElement.style.setProperty('--sec', '#0F172A')
+  rootElement.style.setProperty('--tri1', '#7588a5')
+  rootElement.style.setProperty('--tri2', '#e0e2e5')
+  rootElement.style.setProperty('--sea', '#38BDF8')
+  rootElement.style.setProperty('--gre', '#22C55E')
+  rootElement.style.setProperty('--blue', '#60A5FA')
+  rootElement.style.setProperty('--red', '#EF4444')
+  flag = 1
 }
 
 
-    })
+  /* ☀️ WARM COFFEE / CHAI */
+  else if (flag === 1) {
+    rootElement.style.setProperty('--pri', '#2A1A0A')
+    rootElement.style.setProperty('--black', '#000000')  // ✅ TASK TEXT BLACK
+    rootElement.style.setProperty('--sec', '#FBF3E6')
+    rootElement.style.setProperty('--tri1', '#E7C9A9')
+    rootElement.style.setProperty('--tri2', '#8B5A2B')
+    rootElement.style.setProperty('--sea', '#C08457')
+    rootElement.style.setProperty('--gre', '#16A34A')
+    rootElement.style.setProperty('--blue', '#2563EB')
+    rootElement.style.setProperty('--red', '#B91C1C')
+    flag = 2
+  }
 
+  /* 🧊 DEFAULT / SOFT NEUTRAL */
+  else {
+    rootElement.style.setProperty('--pri', '#1F2937')
+    rootElement.style.setProperty('--black', '#000000')  // ✅ TASK TEXT BLACK
+    rootElement.style.setProperty('--sec', '#F8F6F1')
+    rootElement.style.setProperty('--tri1', '#E4E8D9')
+    rootElement.style.setProperty('--tri2', '#9BAF8F')
+    rootElement.style.setProperty('--sea', '#6B8E6E')
+    rootElement.style.setProperty('--gre', '#22C55E')
+    rootElement.style.setProperty('--blue', '#3B82F6')
+    rootElement.style.setProperty('--red', '#DC2626')
+    flag = 0
+  }
+})
 
-
-
-changeTheme()
