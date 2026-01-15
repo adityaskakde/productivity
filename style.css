@@ -20,12 +20,19 @@
 
 @font-face {
     font-family: light;
+
   src: url("./fonnts.com-Aeonik-Regular.ttf");
+
+src: url("./fonnts.com-Aeonik-Regular.ttf");
+
 
 }
 @font-face {
     font-family: normal;
+
   src: url("./fonnts.com-Aeonik-Regular.ttf");
+
+   src: url("./fonnts.com-Aeonik-Regular.ttf");
 
 }
 
@@ -623,8 +630,7 @@ section.allElem > video{
     position: relative;
     width: 100%;
     background-color:var(--sec);
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 30px;   padding: 10px;
     border: 3px solid var(--tri2);
  }
    .motivational-fullpage .motivational-container .motivationl-wrapper img{
@@ -889,6 +895,7 @@ section.allElem > video{
   color: var(--black);
   background-color: var(--tri1);
 }
+<<<<<<< HEAD
 
 
 
@@ -1070,3 +1077,5 @@ section.allElem > video{
     width: 70%;
   }
 }
+=======
+>>>>>>> 5bd21b021805ff6ae83aa16f26fc0823269d217d
