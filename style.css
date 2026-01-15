@@ -20,11 +20,13 @@
 
 @font-face {
     font-family: light;
-    src: url(./fonnts.com-Aeonik-Regular.ttf);
+  src: url("./fonnts.com-Aeonik-Regular.ttf");
+
 }
 @font-face {
     font-family: normal;
-    src: url(./fonnts.com-Aeonik-Regular.ttf);
+  src: url("./fonnts.com-Aeonik-Regular.ttf");
+
 }
 
 *{
@@ -108,7 +110,7 @@ nav{
 
 section.allElem{
     /* position:absolute; */
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
 
     padding: 40px;
@@ -118,18 +120,18 @@ section.allElem{
     /* background-color: var(--tri2); */
     /* overflow: hidden; */
     position: relative;
-    padding: 100px 40px 40px; /* 🔥 nav height + gap */
+    padding: 100px 40px 40px; /*
     /* overflow: hidden; */
 
     
 }
 section.allElem > video{
-  position: absolute;
+  position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
-     object-fit: cover;      /* 🔥 yahi main cheez */
+     object-fit: cover;      
   z-index: -1;
 }
 
@@ -886,4 +888,185 @@ section.allElem > video{
 #priority option {
   color: var(--black);
   background-color: var(--tri1);
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+  nav {
+    padding: 10px 12px;
+  }
+
+  .nav-in {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-in h2 {
+    font-size: 22px;
+  }
+
+  .theme h4 {
+    font-size: 18px;
+  }
+
+  section.allElem {
+    padding: 90px 15px 20px;
+  }
+
+  .allElem header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .header1 h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+
+  .header1 h2 {
+    font-size: 22px;
+  }
+
+  .header1 h4 {
+    font-size: 20px;
+  }
+
+  .header2 h1 {
+    font-size: 30px;
+  }
+
+  .header2 h4 {
+    font-size: 18px;
+  }
+
+  .AllFeatures {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .elem {
+    width: 90%;
+    height: 240px;
+  }
+
+  /* TODO PAGE */
+  .todo-list-fullpage .todo-container {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  .todo-list-fullpage .todo-container .addTask,
+  .todo-list-fullpage .todo-container .allTask {
+    width: 100%;
+    height: auto;
+  }
+
+  .task h5 {
+    font-size: 20px;
+  }
+
+  /* DAILY PLANNER */
+  .daily-panner-fullpage .day-planner-time {
+    width: 100%;
+  }
+
+  /* MOTIVATION */
+  .motivational-fullpage .motivational-container {
+    width: 90%;
+  }
+
+  .motivation-2 h2 {
+    font-size: 26px;
+  }
+
+  .motivation-3 h2 {
+    font-size: 20px;
+  }
+
+  /* POMODORO */
+  .pomo-timer h1 {
+    font-size: 70px;
+  }
+
+  .pomo-timer button {
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+    section.allElem > video{
+    height: 100svh;   /* 🔥 mobile browser fix */
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .allElem header {
+    padding: 30px;
+  }
+
+  .header1 h1 {
+    font-size: 45px;
+  }
+
+  .header1 h2 {
+    font-size: 28px;
+  }
+
+  .header2 h1 {
+    font-size: 40px;
+  }
+
+  .AllFeatures {
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .elem {
+    width: 200px;
+    height: 260px;
+  }
+
+  .todo-list-fullpage .todo-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .todo-list-fullpage .todo-container .addTask,
+  .todo-list-fullpage .todo-container .allTask {
+    width: 100%;
+  }
+
+  .motivational-fullpage .motivational-container {
+    width: 80%;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .AllFeatures {
+    gap: 50px;
+  }
+
+  .elem {
+    width: 220px;
+    height: 270px;
+  }
+
+  .motivational-fullpage .motivational-container {
+    width: 70%;
+  }
 }
